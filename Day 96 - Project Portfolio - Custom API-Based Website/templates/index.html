@@ -1,0 +1,14 @@
+{% include "header.html" %}
+
+<h1> What country would you like to learn about?</h1>
+
+<form name="Select-Country" action="" method="POST">
+    <label>Select a country:</label>
+    <select name="chosen_country" class="Input">
+        <option selected disabled> </option>
+        {% for country in countries: %}
+            <option value="{{ country }}">{{ country }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value ="OK">
+</form>
